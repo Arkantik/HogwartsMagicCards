@@ -1,4 +1,7 @@
 {
+  "name": "hogwarts-magic-cards",
+  "homepage": "https://arkantik.github.io/hogwarts-magic-cards",
+  "private": false,
   "scripts": {
     "dev": "vite",
     "build": "vite build",

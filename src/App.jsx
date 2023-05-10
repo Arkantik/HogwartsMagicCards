@@ -26,31 +26,28 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
-        <Route path="/HogwartsMagicCards/" element={<RootLayout />}>
+        <Route exact path="/hogwarts-magic-cards" element={<RootLayout />}>
           <Route index element={<Home setAudioName={setAudioName} />} />
           <Route
-            path="/HogwartsMagicCards/inventory"
+            path="/inventory"
             element={<Inventory setAudioName={setAudioName} />}
           />
           <Route
-            path="/HogwartsMagicCards/account"
+            path="/account"
             element={<Account setAudioName={setAudioName} />}
           />
           <Route
-            path="/HogwartsMagicCards/login"
+            path="/login"
             element={<Login setAudioName={setAudioName} />}
           />
           <Route
-            path="/HogwartsMagicCards/register"
+            path="/register"
             element={<Register setAudioName={setAudioName} />}
           />
         </Route>
-        <Route path="/HogwartsMagicCards/" element={<GameLayout />}>
-          <Route
-            path="/HogwartsMagicCards/play"
-            element={<Play setAudioName={setAudioName} />}
-          />
-          <Route path="/HogwartsMagicCards/*" element={<NotFound />} />
+        <Route exact path="/hogwarts-magic-cards" element={<GameLayout />}>
+          <Route path="/play" element={<Play setAudioName={setAudioName} />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </>
     )
@@ -73,7 +70,7 @@ function App() {
         className="audioIcons"
         style={{ zIndex: 3 }}
       />
-      <RouterProvider router={router} />
+      <RouterProvider router={router} basename="/hogwarts-magic-cards" />
     </div>
   ); /* eslint-enable */
 }

@@ -27,7 +27,10 @@ function App() {
     createRoutesFromElements(
       <>
         <Route path="/hogwarts-magic-cards" element={<RootLayout />}>
-          <Route index element={<Home setAudioName={setAudioName} />} />
+          <Route
+            path="/hogwarts-magic-cards"
+            element={<Home setAudioName={setAudioName} />}
+          />
           <Route
             path="/hogwarts-magic-cards/inventory"
             element={<Inventory setAudioName={setAudioName} />}

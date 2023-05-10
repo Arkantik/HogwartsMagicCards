@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Card from "./Card";
+import Card from "./components/Card";
 
 function CardLibrary({
   cards,

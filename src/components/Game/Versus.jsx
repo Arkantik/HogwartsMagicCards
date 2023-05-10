@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import withReactContent from "sweetalert2-react-content";
 import Swal from "sweetalert2/dist/sweetalert2.all.min";
-import Card from "../Card";
+import Card from "./components/Card";
 import CharSpells from "./Spells";
 
 function Versus() {
@@ -134,7 +134,7 @@ function Versus() {
             "<br/>" +
             "<br/>" +
             "<a href='/' style=color:D3A625>Back to Home</a>",
-          iconHtml: '<img src="./assets/image/cup.png" />',
+          iconHtml: '<img src="./src/assets/image/cup.png" />',
           showConfirmButton: false,
           allowOutsideClick: false,
         });
@@ -165,7 +165,7 @@ function Versus() {
             "<br/>" +
             "<br/>" +
             "<a href='/' style=color:D3A625>Back to Home</a>",
-          iconHtml: '<img src="./assets/image/scar.png" />',
+          iconHtml: '<img src="./src/assets/image/scar.png" />',
           showConfirmButton: false,
           allowOutsideClick: false,
         });
@@ -186,7 +186,7 @@ function Versus() {
   }, [currentTurn, myCharacter]);
 
   return (
-    <div className="flex flex-col justify-around min-h-[calc(100vh-200px)] bg-[url('../assets/image/wood.jpg')] bg-cover rounded-xl w-full">
+    <div className="flex flex-col justify-around min-h-[calc(100vh-200px)] bg-[url('./src/assets/image/wood.jpg')] bg-cover rounded-xl w-full">
       <div className="flex justify-around items-center">
         <div className="justify-center items-center space-y-24">
           <div className="flex justify-around gap-8">

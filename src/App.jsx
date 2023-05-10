@@ -26,7 +26,7 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
-        <Route exact path="/hogwarts-magic-cards" element={<RootLayout />}>
+        <Route path="/hogwarts-magic-cards" element={<RootLayout />}>
           <Route index element={<Home setAudioName={setAudioName} />} />
           <Route
             path="/inventory"
@@ -45,7 +45,7 @@ function App() {
             element={<Register setAudioName={setAudioName} />}
           />
         </Route>
-        <Route exact path="/hogwarts-magic-cards" element={<GameLayout />}>
+        <Route path="/hogwarts-magic-cards" element={<GameLayout />}>
           <Route path="/play" element={<Play setAudioName={setAudioName} />} />
           <Route path="*" element={<NotFound />} />
         </Route>
@@ -61,7 +61,7 @@ function App() {
         volume={0.1}
         loop
         playing={audioPlay}
-        url={`./assets/audio/${audioName}.mp3`}
+        url={`./src/assets/audio/${audioName}.mp3`}
         style={{ display: "none" }}
         muted={muted}
       />

@@ -10,7 +10,7 @@ function SearchBar({ handleSearch }) {
         className="outline-none py-2 pl-9 pr-4 rounded-md w-80 bg-dark"
       />
       <img
-        src="./public/assets/icon/Glass.svg"
+        src="./hogwarts-magic-cards/assets/icon/glass.svg"
         className="pl-2 absolute"
         alt="loupe"
       />

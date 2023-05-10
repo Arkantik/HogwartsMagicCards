@@ -7,7 +7,7 @@ export default function Hero() {
       </div>
       <img
         className="object-center object-cover max-h-96"
-        src="../assets/image/Hogwarts.png"
+        src="./hogwarts-magic-cards/assets/image/Hogwarts.png"
         alt="hogward castle"
       />
     </div>

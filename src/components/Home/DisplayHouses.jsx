@@ -3,7 +3,10 @@ function DisplayHouses() {
     <div className="houses-intro md:max-w-[1290px]">
       <div className="house">
         {" "}
-        <img src="./public/assets/image/Gryffindor.png" alt="Gryffindor" />
+        <img
+          src="./hogwarts-magic-cards/assets/image/Gryffindor.png"
+          alt="Gryffindor"
+        />
         <p>
           {" "}
           <span className="description">
@@ -16,7 +19,10 @@ function DisplayHouses() {
       </div>
       <div className="house">
         {" "}
-        <img src="./public/assets/image/Hufflepuff.png" alt="Hufflepuff" />
+        <img
+          src="./hogwarts-magic-cards/assets/image/Hufflepuff.png"
+          alt="Hufflepuff"
+        />
         <p>
           {" "}
           <span className="description">
@@ -29,7 +35,10 @@ function DisplayHouses() {
       </div>
       <div className="house">
         {" "}
-        <img src="./public/assets/image/Ravenclaw.png" alt="Ravenclaw" />
+        <img
+          src="./hogwarts-magic-cards/assets/image/Ravenclaw.png"
+          alt="Ravenclaw"
+        />
         <p>
           {" "}
           <span className="description">
@@ -42,7 +51,10 @@ function DisplayHouses() {
       </div>
       <div className="house">
         {" "}
-        <img src="./public/assets/image/Slytherin.png" alt="Slytherin" />
+        <img
+          src="./hogwarts-magic-cards/assets/image/Slytherin.png"
+          alt="Slytherin"
+        />
         <p>
           {" "}
           <span className="description">

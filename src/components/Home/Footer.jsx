@@ -69,7 +69,7 @@ export default function Footer() {
             <li className="github">
               <a href="https://github.com/WildCodeSchool/2023-02-JS-RemoteFR-JSWizards-P2-Team-Gryffindor">
                 <img
-                  src="./public/assets/icon/github.svg"
+                  src="./hogwarts-magic-cards/assets/icon/github.svg"
                   alt="github logo icon"
                 />
               </a>
@@ -77,7 +77,7 @@ export default function Footer() {
             <li className="twitter">
               <a href="https://www.twitter.com">
                 <img
-                  src="./public/assets/icon/twitter.svg"
+                  src="./hogwarts-magic-cards/assets/icon/twitter.svg"
                   alt="twitter logo icon"
                 />
               </a>
@@ -85,7 +85,7 @@ export default function Footer() {
             <li className="instagram">
               <a href="https://www.instagram.com">
                 <img
-                  src="./public/assets/icon/instagram.svg"
+                  src="./hogwarts-magic-cards/assets/icon/instagram.svg"
                   alt="instagram logo icon"
                 />
               </a>
@@ -93,7 +93,7 @@ export default function Footer() {
             <li className="youtube">
               <a href="https://www.youtube.com">
                 <img
-                  src="./public/assets/icon/youtube.svg"
+                  src="./hogwarts-magic-cards/assets/icon/youtube.svg"
                   alt="youtube logo icon"
                 />
               </a>

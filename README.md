@@ -1,44 +1,44 @@
-## Concept
+<!-- Header section -->
+<h1 align="center">Hogwarts Magic Cards <img src="./public/assets/icon/logo.svg" alt="logo" width="30px" height="30px" ></h1>
 
-This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
-It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying as simple as possible to use.
+### 🧰 Languages & Frameworks used :
 
-## Setup & Use
+<p>
+<img align="left" alt="HTML" width="30px" style="padding-right:2rem;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/>
+<img align="left" alt="CSS" width="30px" style="padding-right:2rem;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/>      
+<img align="left" alt="JavaScript" width="30px" style="padding-right:2rem;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/>
+<img align="left" alt="NodeJS" width="30px" style="padding-right:2rem;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"/>
+<img align="left" alt="ReactJS" width="30px" style="padding-right:2rem;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"/>
+<img align="left" alt="TailwindCSS" width="30px" style="padding-right:2rem;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"/>
+</p>
 
-### Project Initialization
+</br>
+</br>
 
-- In VSCode, install plugins **Prettier - Code formatter** and **ESLint** and configure them
-- Clone this repo, enter it
-- If you are using `yarn` or `pnpm`, adapt the `config/cli` in `package.json`
-- Run command `npm install`
-- _NB: To launch the backend server, you'll need an environment file with database credentials. You'll find a template one in `backend/.env.sample`_
+### 🖥️ Software & Tools used :
 
-### Available Commands
+<p>
+<img align="left" alt="Visual Studio Code" style="padding-right:0.5rem;" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?logo=visual-studio-code&logoColor=white"/>
+<img align="left" alt="Git" style="padding-right:0.5rem;" src="https://img.shields.io/badge/Git-F05033.svg?logo=git&logoColor=white"/>
+<a href="#"><img alt="Bash" style="padding-right:0.5rem;" src="https://img.shields.io/badge/Bash-4EAA25.svg?logo=gnu-bash&logoColor=white"/></a>
+<img align="left" alt="GitHub Desktop" style="padding-right:0.5rem;" src="https://img.shields.io/badge/GitHub%20Desktop-8034A9.svg?logo=github&logoColor=white"/>
+<a href="#"><img alt="GitHub Actions" style="padding-right:0.5rem;" src="https://img.shields.io/badge/GitHub%20Actions-2671E5.svg?logo=github%20actions&logoColor=white"></a>
+<img align="left" alt="Figma" style="padding-right:0.5rem;" src="https://img.shields.io/badge/-Figma-F24E1E.svg?logo=figma&logoColor=white"/>
+<img align="left" alt="Discord" style="padding-right:0.5rem;" src="https://img.shields.io/badge/-Discord-5865F2.svg?logo=discord&logoColor=white"/>
+<img align="left" alt="Google suite" style="padding-right:0.5rem;" src="https://img.shields.io/badge/-Google Suite-yellow.svg?logo=meistertask&logoColor=white"/>
+</p>
+</br>
 
-- `migrate` : Run the database migration script
-- `dev` : Starts both servers (frontend + backend) in one terminal
-- `dev-front` : Starts the React frontend server
-- `dev-back` : Starts the Express backend server
-- `lint` : Runs validation tools, and refuses unclean code (will be executed on every _commit_)
-- `fix` : Fixes linter errors (run it if `lint` growls on your code !)
+#
 
-## FAQ
+### 👨‍💻 Team of developers :
 
-### Tools
+- Hafsa Aït Ouarraou : https://github.com/hxfsa
+- Thibaut Resse : https://github.com/neolink78
+- Victor Fabier : https://github.com/Oshimaaa
+- Youcef Aissat: https://github.com/YouceF-dz16
+- Jeremy Dohin : https://github.com/Arkantik
 
-- _Concurrently_ : Allows for several commands to run concurrently in the same CLI
-- _Husky_ : Allows to execute specific commands that trigger on _git_ events
-- _Vite_ : Alternative to _Create-React-App_, packaging less tools for a more fluid experience
-- _ESLint_ : "Quality of code" tool, ensures chosen rules will be enforced
-- _Prettier_ : "Quality of code" tool as well, focuses on the styleguide
-- _ Airbnb Standard_ : One of the most known "standards", even though it's not officially linked to ES/JS
-- _Nodemon_ : Allows to restart the server everytime a .js file is udated
+</br>
 
-### Deployment
-
-For deployment, you have to go to `secrets` → app `actions` on the github repo to insert via `New repository secret` :
-
-- CAPROVER_BACK_APPNAME : name app on caprover
-- CAPROVER_FRONT_APPNAME : name app on caprover
-- CAPROVER_PASSWORD : password caprover
-- CAPROVER_SERVER : link of domain
+<em><strong>Note</strong>: This project has been created following the Project 2 of the Web & Mobile developer certification at WildCodeSchool.</em>

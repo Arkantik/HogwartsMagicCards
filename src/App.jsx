@@ -26,7 +26,7 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
-        <Route path="/hogwarts-magic-cards" element={<RootLayout />}>
+        <Route path="/" element={<RootLayout />}>
           <Route index element={<Home setAudioName={setAudioName} />} />
           <Route
             path="/inventory"
@@ -45,7 +45,7 @@ function App() {
             element={<Register setAudioName={setAudioName} />}
           />
         </Route>
-        <Route path="/hogwarts-magic-cards" element={<GameLayout />}>
+        <Route path="/" element={<GameLayout />}>
           <Route path="/play" element={<Play setAudioName={setAudioName} />} />
           <Route path="*" element={<NotFound />} />
         </Route>

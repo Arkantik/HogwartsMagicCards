@@ -3,7 +3,7 @@ function DisplayHouses() {
     <div className="houses-intro md:max-w-[1290px]">
       <div className="house">
         {" "}
-        <img src="../assets/image/Gryffindor.png" alt="Gryffindor" />
+        <img src="./public/assets/image/Gryffindor.png" alt="Gryffindor" />
         <p>
           {" "}
           <span className="description">
@@ -16,7 +16,7 @@ function DisplayHouses() {
       </div>
       <div className="house">
         {" "}
-        <img src="../assets/image/Hufflepuff.png" alt="Hufflepuff" />
+        <img src="./public/assets/image/Hufflepuff.png" alt="Hufflepuff" />
         <p>
           {" "}
           <span className="description">
@@ -29,7 +29,7 @@ function DisplayHouses() {
       </div>
       <div className="house">
         {" "}
-        <img src="../assets/image/Ravenclaw.png" alt="Ravenclaw" />
+        <img src="./public/assets/image/Ravenclaw.png" alt="Ravenclaw" />
         <p>
           {" "}
           <span className="description">
@@ -42,7 +42,7 @@ function DisplayHouses() {
       </div>
       <div className="house">
         {" "}
-        <img src="../assets/image/Slytherin.png" alt="Slytherin" />
+        <img src="./public/assets/image/Slytherin.png" alt="Slytherin" />
         <p>
           {" "}
           <span className="description">

@@ -28,7 +28,7 @@ function App() {
       <>
         <Route path="/hogwarts-magic-cards" element={<RootLayout />}>
           <Route
-            path="/hogwarts-magic-cards"
+            path="/hogwarts-magic-cards/"
             element={<Home setAudioName={setAudioName} />}
           />
           <Route
@@ -67,7 +67,7 @@ function App() {
         volume={0.1}
         loop
         playing={audioPlay}
-        url={`./hogwarts-magic-cards/assets/audio/${audioName}.mp3`}
+        url={`./public/assets/audio/${audioName}.mp3`}
         style={{ display: "none" }}
         muted={muted}
       />

@@ -69,7 +69,7 @@ export default function Footer() {
             <li className="github">
               <a href="https://github.com/WildCodeSchool/2023-02-JS-RemoteFR-JSWizards-P2-Team-Gryffindor">
                 <img
-                  src="./hogwarts-magic-cards/assets/icon/github.svg"
+                  src="../../public/assets/icon/github.svg"
                   alt="github logo icon"
                 />
               </a>
@@ -85,17 +85,14 @@ export default function Footer() {
             <li className="instagram">
               <a href="https://www.instagram.com">
                 <img
-                  src="./hogwarts-magic-cards/assets/icon/instagram.svg"
+                  src="./public/assets/icon/instagram.svg"
                   alt="instagram logo icon"
                 />
               </a>
             </li>
             <li className="youtube">
               <a href="https://www.youtube.com">
-                <img
-                  src="./hogwarts-magic-cards/assets/icon/youtube.svg"
-                  alt="youtube logo icon"
-                />
+                <img src="../assets/icon/youtube.svg" alt="youtube logo icon" />
               </a>
             </li>
           </ul>

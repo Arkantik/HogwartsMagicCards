@@ -1,5 +1,5 @@
 <!-- Header section -->
-<h1 align="center">Hogwarts Magic Cards<img src="./public/assets/icon/logo.svg" width="30px" height="30px" alt="logo"></h1>
+<h1 align="center">Hogwarts Magic Cards <img src="./public/assets/icon/logo.svg" alt="logo" width="30px" height="30px" ></h1>
 
 ### 🧰 Languages & Frameworks used :
 

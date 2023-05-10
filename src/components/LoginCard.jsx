@@ -150,7 +150,7 @@ export default function LoginCard() {
         <p className="flex justify-center text-xs">
           Don't have an account yet?
         </p>
-        <NavLink to="/register">
+        <NavLink to="/hogwarts-magic-cards/register">
           <p className="flex justify-center text-xs font-semibold">
             Register here!
           </p>

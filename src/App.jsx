@@ -26,27 +26,30 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
-        <Route path="/" element={<RootLayout />}>
+        <Route path="/hogwarts-magic-cards" element={<RootLayout />}>
           <Route index element={<Home setAudioName={setAudioName} />} />
           <Route
-            path="/inventory"
+            path="/hogwarts-magic-cards/inventory"
             element={<Inventory setAudioName={setAudioName} />}
           />
           <Route
-            path="/account"
+            path="/hogwarts-magic-cards/account"
             element={<Account setAudioName={setAudioName} />}
           />
           <Route
-            path="/login"
+            path="/hogwarts-magic-cards/login"
             element={<Login setAudioName={setAudioName} />}
           />
           <Route
-            path="/register"
+            path="/hogwarts-magic-cards/register"
             element={<Register setAudioName={setAudioName} />}
           />
         </Route>
-        <Route path="/" element={<GameLayout />}>
-          <Route path="/play" element={<Play setAudioName={setAudioName} />} />
+        <Route path="/hogwarts-magic-cards" element={<GameLayout />}>
+          <Route
+            path="/hogwarts-magic-cards/play"
+            element={<Play setAudioName={setAudioName} />}
+          />
           <Route path="*" element={<NotFound />} />
         </Route>
       </>
@@ -61,7 +64,7 @@ function App() {
         volume={0.1}
         loop
         playing={audioPlay}
-        url={`../assets/audio/${audioName}.mp3`}
+        url={`./hogwarts-magic-cards/assets/audio/${audioName}.mp3`}
         style={{ display: "none" }}
         muted={muted}
       />
@@ -70,7 +73,7 @@ function App() {
         className="audioIcons"
         style={{ zIndex: 3 }}
       />
-      <RouterProvider router={router} basename="/hogwarts-magic-cards" />
+      <RouterProvider router={router} />
     </div>
   ); /* eslint-enable */
 }

@@ -104,7 +104,7 @@ export default function RegisterCard() {
           </button>
         </div>
         <p className="flex justify-center text-xs">Already have an account?</p>
-        <NavLink to="/login">
+        <NavLink to="/hogwarts-magic-cards/login">
           <p className="flex justify-center text-xs font-semibold">Sign in!</p>
         </NavLink>
       </div>

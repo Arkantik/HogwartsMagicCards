@@ -25,7 +25,7 @@ export default function NotFound({ setAudioName }) {
         <h2 className="text-xl text-center mb-4">Oops page not found!</h2>
         <p className=" mb-4">The page you are looking for is missing</p>
       </div>
-      <Link to="/">
+      <Link to="/hogwarts-magic-cards">
         <button
           type="button"
           className="relative py-2 px-5 bg-dark rounded-3xl hover:text-dark hover:bg-secondary"

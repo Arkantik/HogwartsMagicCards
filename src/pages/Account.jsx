@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import PropTypes from "prop-types";
-import Card from "../components/Card";
-import AccountBanner from "../components/Account/AccountBanner";
-import GameHistoryReact from "../components/Account/GameHistoryReact";
+import Card from "./components/Card";
+import AccountBanner from "./components/Account/AccountBanner";
+import GameHistoryReact from "./components/Account/GameHistoryReact";
 
 export default function Account({ setAudioName }) {
   useEffect(() => {

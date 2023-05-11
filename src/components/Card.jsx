@@ -1,5 +1,19 @@
 import PropTypes from "prop-types";
-import defaultImage from "../assets/image/placeholder.jpg";
+
+// assets
+import defaultImage from "../../public/assets/image/placeholder.jpg";
+import gryffindor from "../../public/assets/image/CardGryf.png";
+import gyffindorLogo from "../../public/assets/icon/gryf-logo.svg";
+import hufflepuff from "../../public/assets/image/CardHuff.png";
+import hufflepuffLogo from "../../public/assets/icon/huff-logo.svg";
+import ravenclaw from "../../public/assets/image/CardRav.png";
+import ravenclawLogo from "../../public/assets/icon/rav-logo.svg";
+import slytherin from "../../public/assets/image/CardSly.png";
+import slytherinLogo from "../../public/assets/icon/sly-logo.svg";
+import defaultCard from "../../public/assets/image/CardDefault.png";
+import defaultLogo from "../../public/assets/image/Hogwarts-icon.png";
+
+// data
 import missingImg from "../db/imgData.json";
 
 function Card({
@@ -19,24 +33,24 @@ function Card({
     missingImage[0] !== undefined ? missingImage[0].image : defaultImage;
   switch (house) {
     case "Gryffindor":
-      backgroundSrc = "../assets/image/CardGryf.png";
-      logoSrc = "../assets/icon/gryf-logo.svg";
+      backgroundSrc = gryffindor;
+      logoSrc = gyffindorLogo;
       break;
     case "Hufflepuff":
-      backgroundSrc = "../assets/image/CardHuff.png";
-      logoSrc = "../assets/icon/huff-logo.svg";
+      backgroundSrc = hufflepuff;
+      logoSrc = hufflepuffLogo;
       break;
     case "Ravenclaw":
-      backgroundSrc = "../assets/image/CardRav.png";
-      logoSrc = "../assets/icon/rav-logo.svg";
+      backgroundSrc = ravenclaw;
+      logoSrc = ravenclawLogo;
       break;
     case "Slytherin":
-      backgroundSrc = "../assets/image/CardSly.png";
-      logoSrc = "../assets/icon/sly-logo.svg";
+      backgroundSrc = slytherin;
+      logoSrc = slytherinLogo;
       break;
     default:
-      backgroundSrc = "../assets/image/CardDefault.png";
-      logoSrc = "../assets/image/Hogwarts-icon.png";
+      backgroundSrc = defaultCard;
+      logoSrc = defaultLogo;
       break;
   }
   function handleClick() {

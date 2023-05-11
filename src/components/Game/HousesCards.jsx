@@ -1,5 +1,11 @@
 import PropTypes from "prop-types";
 
+// assets
+import gryffindor from "../../../public/assets/image/Gryffindor.png";
+import hufflepuff from "../../../public/assets/image/Hufflepuff.png";
+import ravenclaw from "../../../public/assets/image/Ravenclaw.png";
+import slytherin from "../../../public/assets/image/Slytherin.png";
+
 export default function HousesCards({ setSelectedHouse }) {
   return (
     <div className="flex flex-col items-center space-y-8">
@@ -18,7 +24,7 @@ export default function HousesCards({ setSelectedHouse }) {
               onChange={() => setSelectedHouse("Gryffindor")}
             />
             <label htmlFor="gryffindor">
-              <img src="../assets/image/Gryffindor.png" alt="Gryffindor" />
+              <img src={gryffindor} alt="Gryffindor" />
               <p className="character">
                 Justice, brave, courageous, helping others, protector and
                 daring.
@@ -33,7 +39,7 @@ export default function HousesCards({ setSelectedHouse }) {
               onChange={() => setSelectedHouse("Hufflepuff")}
             />
             <label htmlFor="hufflepuff">
-              <img src="../assets/image/Hufflepuff.png" alt="Hufflepuff" />
+              <img src={hufflepuff} alt="Hufflepuff" />
               <p className="character">
                 Humble, loyal and unassuming, fairness and impartiality.
               </p>
@@ -47,7 +53,7 @@ export default function HousesCards({ setSelectedHouse }) {
               onChange={() => setSelectedHouse("Ravenclaw")}
             />
             <label htmlFor="ravenclaw">
-              <img src="../assets/image/Ravenclaw.png" alt="Ravenclaw" />
+              <img src={ravenclaw} alt="Ravenclaw" />
               <p className="character">
                 Analytical and logical, love of learning and intellectual
                 curiosity.
@@ -62,7 +68,7 @@ export default function HousesCards({ setSelectedHouse }) {
               onChange={() => setSelectedHouse("Slytherin")}
             />
             <label htmlFor="slytherin">
-              <img src="../assets/image/Slytherin.png" alt="Slytherin" />
+              <img src={slytherin} alt="Slytherin" />
               <p className="character">
                 Strategic, calculating, strong sens of self-preservation.
               </p>

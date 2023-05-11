@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
+// assets
+import filterBtn from "../../public/assets/icon/filter.svg";
+
 export default function FilterBtn({ cards, setFilteredCards }) {
   const [isOpen, setIsOpen] = useState(false);
   const [checkedHouse, setCheckedHouse] = useState([]);
@@ -37,7 +40,7 @@ export default function FilterBtn({ cards, setFilteredCards }) {
         className="text-gray-800 font-semibold py-1 rounded inline-flex items-center"
         onClick={handleToggle}
       >
-        <img src="../assets/icon/filter.svg" alt="filter button" />
+        <img src={filterBtn} alt="filter button" />
       </button>
       <ul
         className={`${

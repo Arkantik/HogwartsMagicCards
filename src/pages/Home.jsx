@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import PropTypes from "prop-types";
-import Hero from "../components/Home/Hero";
-import DisplayHouses from "../components/Home/DisplayHouses";
+import Hero from "./components/Home/Hero";
+import DisplayHouses from "./components/Home/DisplayHouses";
 
 export default function Home({ setAudioName }) {
   useEffect(() => {

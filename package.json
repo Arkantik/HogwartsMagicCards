@@ -1,8 +1,13 @@
 {
+  "name": "hogwarts-magic-cards",
+  "homepage": "https://arkantik.github.io/hogwarts-magic-cards",
+  "private": false,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview --port 8080",
+    "preview": "vite preview",
     "lint": "echo '----- Checking Frontend...' && prettier --debug-check . && eslint --ext .jsx . && echo '----- Done!'",
     "fix": "prettier --write . && eslint --fix --ext .jsx ."
   },
@@ -10,6 +15,7 @@
     "@react-oauth/google": "^0.11.0",
     "axios": "^1.4.0",
     "emailjs-com": "^3.2.0",
+    "gh-pages": "^5.0.0",
     "lottie-react": "^2.4.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",

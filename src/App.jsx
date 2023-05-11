@@ -26,31 +26,35 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
-        <Route path="/HogwartsMagicCards/" element={<RootLayout />}>
-          <Route index element={<Home setAudioName={setAudioName} />} />
+        <Route path="/hogwarts-magic-cards" element={<RootLayout />}>
           <Route
-            path="/HogwartsMagicCards/inventory"
+            index
+            path="/hogwarts-magic-cards/"
+            element={<Home setAudioName={setAudioName} />}
+          />
+          <Route
+            path="/hogwarts-magic-cards/inventory"
             element={<Inventory setAudioName={setAudioName} />}
           />
           <Route
-            path="/HogwartsMagicCards/account"
+            path="/hogwarts-magic-cards/account"
             element={<Account setAudioName={setAudioName} />}
           />
           <Route
-            path="/HogwartsMagicCards/login"
+            path="/hogwarts-magic-cards/login"
             element={<Login setAudioName={setAudioName} />}
           />
           <Route
-            path="/HogwartsMagicCards/register"
+            path="/hogwarts-magic-cards/register"
             element={<Register setAudioName={setAudioName} />}
           />
         </Route>
-        <Route path="/HogwartsMagicCards/" element={<GameLayout />}>
+        <Route path="/hogwarts-magic-cards" element={<GameLayout />}>
           <Route
-            path="/HogwartsMagicCards/play"
+            path="/hogwarts-magic-cards/play"
             element={<Play setAudioName={setAudioName} />}
           />
-          <Route path="/HogwartsMagicCards/*" element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </>
     )
@@ -64,7 +68,7 @@ function App() {
         volume={0.1}
         loop
         playing={audioPlay}
-        url={`./assets/audio/${audioName}.mp3`}
+        url={`../public/assets/audio/${audioName}.mp3`}
         style={{ display: "none" }}
         muted={muted}
       />

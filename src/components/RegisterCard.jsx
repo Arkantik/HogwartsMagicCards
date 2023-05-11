@@ -1,6 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
+// assets
+import passHide from "../../public/assets/icon/passHide.svg";
+import passShow from "../../public/assets/icon/passShow.svg";
+import google from "../../public/assets/icon/google.svg";
+
 export default function RegisterCard() {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [passwordConfVisible, setPasswordConfVisible] = useState(false);
@@ -46,11 +51,7 @@ export default function RegisterCard() {
               {/* eslint-disable */}
               <span className="flex absolute right-3">
                 <img
-                  src={
-                    passwordVisible
-                      ? "../assets/icon/pass-hide.svg"
-                      : "../assets/icon/pass-show.svg"
-                  }
+                  src={passwordVisible ? passHide : passShow}
                   alt="show password icon"
                   onClick={handlePasswordVisibility}
                 />
@@ -66,11 +67,7 @@ export default function RegisterCard() {
               {/* eslint-disable */}
               <span className="flex absolute right-3">
                 <img
-                  src={
-                    passwordConfVisible
-                      ? "../assets/icon/pass-hide.svg"
-                      : "../assets/icon/pass-show.svg"
-                  }
+                  src={passwordConfVisible ? passHide : passShow}
                   alt="show password icon"
                   onClick={handlePassConfVisibility}
                 />
@@ -97,11 +94,11 @@ export default function RegisterCard() {
             type="button"
             className="flex items-center justify-center rounded-3xl px-5 py-2.5 w-20 bg-white ring-1 ring-transparent hover:ring-secondary duration-300 ease-in-out"
           >
-            <img src="../assets/icon/google.svg" alt="Google login button" />
+            <img src={google} alt="Google login button" />
           </button>
         </div>
         <p className="flex justify-center text-xs">Already have an account?</p>
-        <NavLink to="/login">
+        <NavLink to="/hogwarts-magic-cards/login">
           <p className="flex justify-center text-xs font-semibold">Sign in!</p>
         </NavLink>
       </div>

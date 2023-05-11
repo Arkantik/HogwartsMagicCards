@@ -1,5 +1,19 @@
 import PropTypes from "prop-types";
+
+// assets
 import defaultImage from "../../public/assets/image/placeholder.jpg";
+import gryffindor from "../../public/assets/image/CardGryf.png";
+import gyffindorLogo from "../../public/assets/icon/gryf-logo.svg";
+import hufflepuff from "../../public/assets/image/CardHuff.png";
+import hufflepuffLogo from "../../public/assets/icon/huff-logo.svg";
+import ravenclaw from "../../public/assets/image/CardRav.png";
+import ravenclawLogo from "../../public/assets/icon/rav-logo.svg";
+import slytherin from "../../public/assets/image/CardSly.png";
+import slytherinLogo from "../../public/assets/icon/sly-logo.svg";
+import defaultCard from "../../public/assets/image/CardDefault.png";
+import defaultLogo from "../../public/assets/image/Hogwarts-icon.png";
+
+// data
 import missingImg from "../db/imgData.json";
 
 function Card({
@@ -19,24 +33,24 @@ function Card({
     missingImage[0] !== undefined ? missingImage[0].image : defaultImage;
   switch (house) {
     case "Gryffindor":
-      backgroundSrc = "./hogwarts-magic-cards/assets/image/CardGryf.png";
-      logoSrc = "./hogwarts-magic-cards/assets/icon/gryf-logo.svg";
+      backgroundSrc = gryffindor;
+      logoSrc = gyffindorLogo;
       break;
     case "Hufflepuff":
-      backgroundSrc = "./hogwarts-magic-cards/assets/image/CardHuff.png";
-      logoSrc = "./hogwarts-magic-cards/assets/icon/huff-logo.svg";
+      backgroundSrc = hufflepuff;
+      logoSrc = hufflepuffLogo;
       break;
     case "Ravenclaw":
-      backgroundSrc = "./hogwarts-magic-cards/assets/image/CardRav.png";
-      logoSrc = "./hogwarts-magic-cards/assets/icon/rav-logo.svg";
+      backgroundSrc = ravenclaw;
+      logoSrc = ravenclawLogo;
       break;
     case "Slytherin":
-      backgroundSrc = "./hogwarts-magic-cards/assets/image/CardSly.png";
-      logoSrc = "./hogwarts-magic-cards/assets/icon/sly-logo.svg";
+      backgroundSrc = slytherin;
+      logoSrc = slytherinLogo;
       break;
     default:
-      backgroundSrc = "./hogwarts-magic-cards/assets/image/CardDefault.png";
-      logoSrc = "./hogwarts-magic-cards/assets/image/Hogwarts-icon.png";
+      backgroundSrc = defaultCard;
+      logoSrc = defaultLogo;
       break;
   }
   function handleClick() {

@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import withReactContent from "sweetalert2-react-content";
 import Swal from "sweetalert2/dist/sweetalert2.all.min";
-import Card from "./components/Card";
+import Card from "../Card";
 import CharSpells from "./Spells";
+
+// assets
 
 function Versus() {
   const [myCharacter, setMyCharacter] = useState(null);
@@ -134,7 +136,7 @@ function Versus() {
             "<br/>" +
             "<br/>" +
             "<a href='/' style=color:D3A625>Back to Home</a>",
-          iconHtml: '<img src="./src/assets/image/cup.png" />',
+          iconHtml: '<img src={"../../public/assets/image/cup.png"} />',
           showConfirmButton: false,
           allowOutsideClick: false,
         });
@@ -165,7 +167,7 @@ function Versus() {
             "<br/>" +
             "<br/>" +
             "<a href='/' style=color:D3A625>Back to Home</a>",
-          iconHtml: '<img src="./src/assets/image/scar.png" />',
+          iconHtml: '<img src="../public/assets/image/scar.png" />',
           showConfirmButton: false,
           allowOutsideClick: false,
         });

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import PropTypes from "prop-types";
 import Lottie from "lottie-react";
-import LottieAnim from "./assets/lotties/404-animation.json";
+import LottieAnim from "../assets/lotties/404-animation.json";
 
 export default function NotFound({ setAudioName }) {
   useEffect(() => {

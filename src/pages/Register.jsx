@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import { useEffect } from "react";
 import PropTypes from "prop-types";
-import RegisterCard from "./components/RegisterCard";
+import RegisterCard from "../components/RegisterCard";
 
 export default function Register({ setAudioName }) {
   useEffect(() => {

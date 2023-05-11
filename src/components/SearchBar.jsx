@@ -1,5 +1,8 @@
 import PropTypes from "prop-types";
 
+// assets
+import glass from "../../public/assets/icon/glass.svg";
+
 function SearchBar({ handleSearch }) {
   return (
     <div className="flex items-center relative">
@@ -9,11 +12,7 @@ function SearchBar({ handleSearch }) {
         placeholder="Search..."
         className="outline-none py-2 pl-9 pr-4 rounded-md w-80 bg-dark"
       />
-      <img
-        src="./hogwarts-magic-cards/assets/icon/glass.svg"
-        className="pl-2 absolute"
-        alt="loupe"
-      />
+      <img src={glass} className="pl-2 absolute" alt="loupe" />
     </div>
   );
 }

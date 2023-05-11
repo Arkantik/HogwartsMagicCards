@@ -3,9 +3,17 @@ import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
+
+// style
+import "react-toastify/dist/ReactToastify.css";
+
+// data
 import dataUsers from "../db/data_users.json";
 
-import "react-toastify/dist/ReactToastify.css";
+// assets
+import passHide from "../../public/assets/icon/passHide.svg";
+import passShow from "../../public/assets/icon/passShow.svg";
+import google from "../../public/assets/icon/google.svg";
 
 export default function LoginCard() {
   const [email, setEmail] = useState("");
@@ -106,11 +114,7 @@ export default function LoginCard() {
               {/* eslint-disable */}
               <span className="flex absolute right-3">
                 <img
-                  src={
-                    passwordVisible
-                      ? "./hogwarts-magic-cards/assets/icon/pass-hide.svg"
-                      : "./hogwarts-magic-cards/assets/icon/pass-show.svg"
-                  }
+                  src={passwordVisible ? passHide : passShow}
                   alt="show password icon"
                   onClick={handlePasswordVisibility}
                 />
@@ -141,10 +145,7 @@ export default function LoginCard() {
             className="flex items-center justify-center rounded-3xl px-5 py-2.5 w-20 bg-white ring-1 ring-transparent hover:ring-secondary duration-300 ease-in-out"
             onClick={login}
           >
-            <img
-              src="./hogwarts-magic-cards/assets/icon/google.svg"
-              alt="Google login button"
-            />
+            <img src={google} alt="Google login button" />
           </button>
         </div>
         <p className="flex justify-center text-xs">

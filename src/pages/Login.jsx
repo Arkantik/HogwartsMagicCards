@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import { useEffect } from "react";
 import PropTypes from "prop-types";
-import LoginCard from "./components/LoginCard";
+import LoginCard from "../components/LoginCard";
 
 export default function Login({ setAudioName }) {
   useEffect(() => {

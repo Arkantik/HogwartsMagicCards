@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import SearchBar from "./components/SearchBar";
-import FilterBtn from "./components/FilterBtn";
-import CardLibrary from "./components/CardLibrary";
+import SearchBar from "../SearchBar";
+import FilterBtn from "../FilterBtn";
+import CardLibrary from "../CardLibrary";
 
 export default function CharSelection({
   selectedHouse,

@@ -1,3 +1,6 @@
+// assets
+import heroImg from "../../../public/assets/image/Hogwarts.png";
+
 export default function Hero() {
   return (
     <div className="flex justify-center items-center">
@@ -7,7 +10,7 @@ export default function Hero() {
       </div>
       <img
         className="object-center object-cover max-h-96"
-        src="./hogwarts-magic-cards/assets/image/Hogwarts.png"
+        src={heroImg}
         alt="hogward castle"
       />
     </div>

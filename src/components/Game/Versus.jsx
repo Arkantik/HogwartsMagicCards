@@ -137,7 +137,7 @@ function Versus() {
             "<br/>" +
             "<br/>" +
             "<a href='/hogwarts-magic-cards/' style=color:D3A625>Back to Home</a>",
-          iconHtml: '<img src={"../assets/image/cup.png"} />',
+          iconHtml: '<img src={"./assets/image/cup.png"} />',
           showConfirmButton: false,
           allowOutsideClick: false,
         });

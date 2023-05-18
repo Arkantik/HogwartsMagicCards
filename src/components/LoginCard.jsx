@@ -47,7 +47,7 @@ export default function LoginCard() {
     );
 
     if (foundUser) {
-      window.location.replace("/");
+      window.location.replace("/hogwarts-magic-cards/");
     } else {
       wrong();
     }
@@ -64,7 +64,7 @@ export default function LoginCard() {
             },
           }
         );
-        window.location.replace("/");
+        window.location.replace("/hogwarts-magic-cards/");
         console.info(data);
       } catch (err) {
         wrong();
@@ -122,7 +122,9 @@ export default function LoginCard() {
               {/* eslint-enable */}
             </div>
             <label htmlFor="Passchange" className="text-xs">
-              <a href="/ChangePassword">Forgot password?</a>
+              <a href="/hogwarts-magic-cards/ChangePassword">
+                Forgot password?
+              </a>
             </label>
           </div>
           <button

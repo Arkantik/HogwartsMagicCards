@@ -5,6 +5,7 @@ import Card from "../Card";
 import CharSpells from "./Spells";
 
 // assets
+import Background from "../../../public/assets/image/wood.jpg";
 
 function Versus() {
   const [myCharacter, setMyCharacter] = useState(null);
@@ -41,6 +42,12 @@ function Versus() {
     }
   };
 
+  const setGameResult = (result) => {
+    const gameHistory = JSON.parse(localStorage.getItem("gameHistory"));
+    gameHistory[gameHistory.length - 1].result = result;
+    localStorage.setItem("gameHistory", JSON.stringify(gameHistory));
+  };
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -68,8 +75,6 @@ function Versus() {
   const [enemyCharacterAP, setEnemyCharacterAP] = useState(
     Math.floor(Math.random() * 30) + 100
   );
-  const [result, setResult] = useState("Abandonned");
-  localStorage.setItem("result", result);
 
   // HP Stats
   const getHP = (enemyId) => {
@@ -128,15 +133,15 @@ function Versus() {
       );
       if (enemyCharacterHP - damage <= 0) {
         setEnemyCharacterHP(0);
-        setResult("Won");
+        setGameResult("Won");
         MySwal.fire({
           title: <strong>YEAH!</strong>,
           html:
             `<i>You beat ${enemyCharacter.name}, you won the Triwizard Cup!</i>` +
             "<br/>" +
             "<br/>" +
-            "<a href='/' style=color:D3A625>Back to Home</a>",
-          iconHtml: '<img src={"../../public/assets/image/cup.png"} />',
+            "<a href='/hogwarts-magic-cards/' style=color:D3A625>Back to Home</a>",
+          iconHtml: '<img src="./assets/image/cup.png" />',
           showConfirmButton: false,
           allowOutsideClick: false,
         });
@@ -159,15 +164,15 @@ function Versus() {
       );
       if (myCharacterHP - damage <= 0) {
         setMyCharacterHP(0);
-        setResult("Lost");
+        setGameResult("Lost");
         MySwal.fire({
           title: <strong>Oh no!</strong>,
           html:
             `<i>${enemyCharacter.name} beat you...</i>` +
             "<br/>" +
             "<br/>" +
-            "<a href='/' style=color:D3A625>Back to Home</a>",
-          iconHtml: '<img src="../public/assets/image/scar.png" />',
+            "<a href='/hogwarts-magic-cards/' style=color:D3A625>Back to Home</a>",
+          iconHtml: '<img src="./assets/image/scar.png" />',
           showConfirmButton: false,
           allowOutsideClick: false,
         });
@@ -188,7 +193,10 @@ function Versus() {
   }, [currentTurn, myCharacter]);
 
   return (
-    <div className="flex flex-col justify-around min-h-[calc(100vh-200px)] bg-[url('./hogwarts-magic-cards/assets/image/wood.jpg')] bg-cover rounded-xl w-full">
+    <div
+      className="flex flex-col justify-around min-h-[calc(100vh-200px)] bg-cover rounded-xl w-full"
+      style={{ backgroundImage: `url(${Background})` }}
+    >
       <div className="flex justify-around items-center">
         <div className="justify-center items-center space-y-24">
           <div className="flex justify-around gap-8">

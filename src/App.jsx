@@ -23,6 +23,7 @@ function App() {
   const [audioPlay, setAudioPlay] = useState(false);
   const [audioName, setAudioName] = useState("mainmusic");
   const [muted, setMuted] = useState(false);
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
@@ -59,16 +60,17 @@ function App() {
       </>
     )
   );
-  const AudioIcons = audioPlay && !muted ? Icons.GoUnmute : Icons.GoMute;
-  /* eslint-disable */
 
+  const AudioIcons = audioPlay && !muted ? Icons.GoUnmute : Icons.GoMute;
+
+  /* eslint-disable */
   return (
     <div tabIndex="0" role="button" onClick={() => setAudioPlay(true)}>
       <ReactPlayer
         volume={0.1}
         loop
         playing={audioPlay}
-        url={`../public/assets/audio/${audioName}.mp3`}
+        url={`./assets/audio/${audioName}.mp3`}
         style={{ display: "none" }}
         muted={muted}
       />

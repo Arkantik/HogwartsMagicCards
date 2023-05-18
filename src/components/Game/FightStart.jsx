@@ -1,25 +1,38 @@
 import { useEffect, useState } from "react";
-import Card from "./components/Card";
+import Card from "../Card";
+
+// assets
+import Background from "../../../public/assets/image/fight.png";
 
 export default function FightStart() {
   const [selectedCharacter, setSelectedCharacter] = useState(null);
   const [randomCharacter, setRandomCharacter] = useState(null);
 
-  useEffect(() => {
-    if (randomCharacter) {
-      localStorage.setItem("randomCharacterId", randomCharacter.id);
-      localStorage.setItem("randomCharacter", JSON.stringify(randomCharacter));
-    }
-  }, [randomCharacter]);
+  const saveGameHistory = (tempSelectedCharacter, tempRandomCharacter) => {
+    const tempGameHistory = localStorage.getItem("gameHistory");
+    const gameHistory = tempGameHistory ? JSON.parse(tempGameHistory) : [];
+    gameHistory.push({
+      result: "Abandonned",
+      selectedCharacter: tempSelectedCharacter,
+      versusCharacter: tempRandomCharacter,
+    });
+    localStorage.setItem(
+      "gameHistory",
+      JSON.stringify(gameHistory.slice(0, 4))
+    );
+  };
 
   const fetchData = async () => {
+    let tempSelectedCharacter;
+    let tempRandomCharacter;
     const localCharacterId = localStorage.getItem("selectedCharacterId");
     const characterIdUrl = `https://hp-api.onrender.com/api/character/${localCharacterId}`;
 
     try {
       const response = await fetch(characterIdUrl);
       const data = await response.json();
-      setSelectedCharacter(data[0]);
+      [tempSelectedCharacter] = data;
+      setSelectedCharacter(tempSelectedCharacter);
     } catch (error) {
       console.error("Error fetching data from API:", error);
     }
@@ -30,7 +43,9 @@ export default function FightStart() {
       const response = await fetch(charactersUrl);
       const data = await response.json();
       const randomNumber = Math.floor(Math.random() * data.length - 1);
-      setRandomCharacter(data[randomNumber]);
+      tempRandomCharacter = data[randomNumber];
+      saveGameHistory(tempSelectedCharacter, tempRandomCharacter);
+      setRandomCharacter(tempRandomCharacter);
     } catch (error) {
       console.error("Error fetching data from API:", error);
     }
@@ -39,9 +54,12 @@ export default function FightStart() {
   useEffect(() => {
     fetchData();
   }, []);
-  localStorage.setItem("selectedCharacter", JSON.stringify(selectedCharacter));
+
   return (
-    <div className="flex flex-col justify-around min-h-[calc(100vh-150px)] bg-[url('./hogwarts-magic-cards/assets/image/fight.png')] bg-cover bg-center rounded-xl w-full">
+    <div
+      className="flex flex-col justify-around min-h-[calc(100vh-150px)] bg-cover bg-center rounded-xl w-full"
+      style={{ backgroundImage: `url(${Background})` }}
+    >
       <div className="flex justify-evenly">
         <div className="justify-center items-center space-y-8">
           <div className="flex justify-around gap-4 scale-125">

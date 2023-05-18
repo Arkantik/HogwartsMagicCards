@@ -6,7 +6,7 @@ import filterBtn from "../../public/assets/icon/filter.svg";
 
 export default function FilterBtn({ cards, setFilteredCards }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [checkedHouse, setCheckedHouse] = useState([]);
+  const [checkedFilter, setCheckedFilter] = useState([]);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
@@ -14,24 +14,24 @@ export default function FilterBtn({ cards, setFilteredCards }) {
 
   const handleHouseChange = (e) => {
     const house = e.target.value;
-    if (checkedHouse.includes(house)) {
-      setCheckedHouse(checkedHouse.filter((h) => h !== house));
+    if (checkedFilter.includes(house)) {
+      setCheckedFilter(checkedFilter.filter((h) => h !== house));
     } else {
-      setCheckedHouse([...checkedHouse, house]);
+      setCheckedFilter([...checkedFilter, house]);
     }
   };
 
   useEffect(() => {
     if (cards) {
       const filtered = cards.filter((card) => {
-        if (checkedHouse.length === 0) {
+        if (checkedFilter.length === 0) {
           return true;
         }
-        return checkedHouse.includes(card.house);
+        return checkedFilter.includes(card.house);
       });
       setFilteredCards(filtered);
     }
-  }, [checkedHouse, cards, setFilteredCards]);
+  }, [checkedFilter, cards, setFilteredCards]);
 
   return (
     <div className="relative">
@@ -53,7 +53,7 @@ export default function FilterBtn({ cards, setFilteredCards }) {
               type="checkbox"
               className="form-checkbox"
               value="Gryffindor"
-              checked={checkedHouse.includes("Gryffindor")}
+              checked={checkedFilter.includes("Gryffindor")}
               onChange={handleHouseChange}
             />
             <span className="ml-2">Gryffindor</span>
@@ -65,7 +65,7 @@ export default function FilterBtn({ cards, setFilteredCards }) {
               type="checkbox"
               className="form-checkbox"
               value="Hufflepuff"
-              checked={checkedHouse.includes("Hufflepuff")}
+              checked={checkedFilter.includes("Hufflepuff")}
               onChange={handleHouseChange}
             />
             <span className="ml-2">Hufflepuff</span>
@@ -77,7 +77,7 @@ export default function FilterBtn({ cards, setFilteredCards }) {
               type="checkbox"
               className="form-checkbox"
               value="Ravenclaw"
-              checked={checkedHouse.includes("Ravenclaw")}
+              checked={checkedFilter.includes("Ravenclaw")}
               onChange={handleHouseChange}
             />
             <span className="ml-2">Ravenclaw</span>
@@ -89,7 +89,7 @@ export default function FilterBtn({ cards, setFilteredCards }) {
               type="checkbox"
               className="form-checkbox"
               value="Slytherin"
-              checked={checkedHouse.includes("Slytherin")}
+              checked={checkedFilter.includes("Slytherin")}
               onChange={handleHouseChange}
             />
             <span className="ml-2">Slytherin</span>
@@ -99,10 +99,3 @@ export default function FilterBtn({ cards, setFilteredCards }) {
     </div>
   );
 }
-
-FilterBtn.propTypes = {
-  setFilteredCards: PropTypes.func.isRequired,
-  cards: PropTypes.arrayOf(
-    PropTypes.oneOfType([PropTypes.object, PropTypes.string])
-  ).isRequired,
-};

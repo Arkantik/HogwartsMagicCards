@@ -136,8 +136,8 @@ function Versus() {
             `<i>You beat ${enemyCharacter.name}, you won the Triwizard Cup!</i>` +
             "<br/>" +
             "<br/>" +
-            "<a href='/' style=color:D3A625>Back to Home</a>",
-          iconHtml: '<img src={"../../../public/assets/image/cup.png"} />',
+            "<a href='/hogwarts-magic-cards/' style=color:D3A625>Back to Home</a>",
+          iconHtml: '<img src={"../assets/image/cup.png"} />',
           showConfirmButton: false,
           allowOutsideClick: false,
         });
@@ -167,8 +167,8 @@ function Versus() {
             `<i>${enemyCharacter.name} beat you...</i>` +
             "<br/>" +
             "<br/>" +
-            "<a href='/' style=color:D3A625>Back to Home</a>",
-          iconHtml: '<img src="../../../public/assets/image/scar.png" />',
+            "<a href='/hogwarts-magic-cards/' style=color:D3A625>Back to Home</a>",
+          iconHtml: '<img src="./assets/image/scar.png" />',
           showConfirmButton: false,
           allowOutsideClick: false,
         });

@@ -28,9 +28,10 @@ function Card({
 }) {
   let backgroundSrc;
   let logoSrc;
-  const missingImage = missingImg.filter((img) => img.id === idwizard);
-  const defaultImg =
-    missingImage[0] !== undefined ? missingImage[0].image : defaultImage;
+  const imageSrc =
+    image ||
+    missingImg.find((img) => img.id === idwizard)?.image ||
+    defaultImage;
   switch (house) {
     case "Gryffindor":
       backgroundSrc = gryffindor;
@@ -54,7 +55,7 @@ function Card({
       break;
   }
   function handleClick() {
-    const cardInfo = { name, house, image, idwizard };
+    const cardInfo = { name, house, image: imageSrc, idwizard };
     localStorage.setItem("pickedUpCard", JSON.stringify(cardInfo));
     setPickedUpCard(cardInfo);
     setNext(false);
@@ -78,7 +79,7 @@ function Card({
       />
       <img
         className="absolute top-3 left-3 object-cover w-[160px] h-[210px] rounded-t-md"
-        src={image || defaultImg}
+        src={imageSrc}
         alt={name}
       />
       <img

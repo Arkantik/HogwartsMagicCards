@@ -1,16 +1,16 @@
 import { useEffect } from "react";
 import PropTypes from "prop-types";
-import Card from "./components/Card";
-import AccountBanner from "./components/Account/AccountBanner";
-import GameHistoryReact from "./components/Account/GameHistoryReact";
+import Card from "../components/Card";
+import AccountBanner from "../components/Account/AccountBanner";
+import GameHistoryReact from "../components/Account/GameHistoryReact";
 
 export default function Account({ setAudioName }) {
   useEffect(() => {
     setAudioName("mainmusic");
   }, []);
 
-  let selectedCharacter = localStorage.getItem("selectedCharacter") || null;
-  selectedCharacter = selectedCharacter ? JSON.parse(selectedCharacter) : null;
+  let pickedUpCard = localStorage.getItem("pickedUpCard") || null;
+  pickedUpCard = pickedUpCard ? JSON.parse(pickedUpCard) : null;
   return (
     <section className="space-y-4">
       <h2 className="text-xl font-serif">My account</h2>
@@ -24,10 +24,10 @@ export default function Account({ setAudioName }) {
             <h2 className="text-lg">Latest card played</h2>
             <div className="absolute top-28">
               <Card
-                idwizard={selectedCharacter?.id}
-                name={selectedCharacter?.name}
-                image={selectedCharacter?.image}
-                house={selectedCharacter?.house}
+                idwizard={pickedUpCard?.id}
+                name={pickedUpCard?.name}
+                image={pickedUpCard?.image}
+                house={pickedUpCard?.house}
               />
             </div>
           </div>
